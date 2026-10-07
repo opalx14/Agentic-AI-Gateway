@@ -1,0 +1,680 @@
+/* Split from travel-agent.css · role module 8. */
+.travel-final-authority dl > div { display:flex; justify-content:space-between; gap:12px; padding-bottom:7px; border-bottom:1px solid rgba(255,255,255,.06); }
+
+.travel-final-authority dt { color:#746b7d; font-size:9px; }
+
+.travel-final-authority dd { margin:0; color:#d7cfe0; font:700 9px var(--font-mono); overflow-wrap:anywhere; text-align:right; }
+
+.travel-final-evidence { display:flex; flex-wrap:wrap; gap:8px; margin-top:12px; }
+
+.travel-final-evidence span,
+.travel-final-evidence a {
+  padding:6px 9px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:999px;
+  color:#a9dfbf;
+  font:700 9px var(--font-mono);
+  text-decoration:none;
+}
+
+.travel-history-backdrop {
+  position:fixed;
+  inset:0;
+  z-index:110;
+  display:flex;
+  justify-content:flex-end;
+  background:rgba(2,2,7,.58);
+  backdrop-filter:blur(8px);
+}
+
+.travel-history-panel {
+  width:min(430px,94vw);
+  height:100%;
+  padding:22px;
+  overflow:auto;
+  border-left:1px solid rgba(255,255,255,.09);
+  background:#0c0912;
+  box-shadow:-28px 0 70px rgba(0,0,0,.4);
+}
+
+.travel-history-head { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; }
+
+.travel-history-head h2 { margin:5px 0 0; font-size:23px; }
+
+.travel-history-head p { margin:7px 0 0; color:#81788a; font-size:11px; line-height:1.5; }
+
+.travel-history-head > button,
+.travel-history-card > button {
+  min-height:34px;
+  padding:0 11px;
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:10px;
+  background:rgba(255,255,255,.035);
+  color:#d8d0df;
+  font-size:10px;
+  cursor:pointer;
+}
+
+.travel-history-card {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:12px;
+  align-items:center;
+  padding:13px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:14px;
+  background:rgba(255,255,255,.025);
+}
+
+.travel-history-card > div { display:grid; gap:4px; min-width:0; }
+
+.travel-history-card span { color:#7ee2a8; font:800 8px var(--font-mono); }
+
+.travel-history-card strong { font-size:13px; }
+
+.travel-history-card small { color:#82798a; font-size:9px; overflow-wrap:anywhere; }
+
+.travel-history-card em { color:#fbbf24; font:700 8px var(--font-mono); font-style:normal; }
+
+.travel-history-card.is-superseded { opacity:.58; }
+
+.travel-history-card.is-superseded span { color:#8b8390; }
+
+@media (max-width:720px) {
+  .travel-welcome-tools { top:10px; right:10px; }
+  .travel-start-context,
+  .travel-wallet-gate { align-items:stretch; flex-direction:column; }
+  .travel-origin-options { width:100%; }
+  .travel-origin-options button { flex:1; }
+  .travel-trip-context-actions { align-items:flex-end; flex-direction:column; }
+  .travel-final-grid { grid-template-columns:1fr; }
+  .travel-final-authority { grid-template-columns:1fr; }
+  .travel-history-panel { width:100%; padding:18px 14px calc(18px + env(safe-area-inset-bottom)); }
+}
+
+/* Travel readability pass: keep prose in Manrope and reserve mono for evidence/status. */
+
+.travel-chat-shell {
+  font-size: 15px;
+}
+
+.travel-chat-welcome > p,
+.travel-thread-user p,
+.travel-current-step-head p,
+.travel-thread-agent-note p,
+.travel-contract-write > p,
+.travel-complete-chat p {
+  font-size: 13px;
+}
+
+.travel-chat-suggestions button,
+.travel-start-context small,
+.travel-wallet-gate small,
+.travel-inline-wallet small,
+.travel-choice-body > small,
+.travel-selected-service > div small,
+.travel-settlement-summary > div span,
+.travel-settlement-summary > div strong,
+.travel-final-authority p,
+.travel-history-head p {
+  font-size: 11px;
+}
+
+.travel-trip-context small,
+.travel-composer-lock,
+.travel-choice-body > em,
+.travel-choice-aircraft,
+.travel-choice-credit,
+.travel-choice-amount > small,
+.travel-choice-amount > span,
+.travel-selected-service > button,
+.travel-contract-instructions code,
+.travel-payment-truth,
+.travel-technical-drawer summary,
+.travel-history-head > button,
+.travel-history-card > button,
+.travel-final-grid article > small,
+.travel-final-grid article > button {
+  font-size: 10px;
+}
+
+.travel-demo-pill,
+.travel-thread-user > span,
+.travel-verified-main span,
+.travel-step-count,
+.travel-trust-lane > b,
+.travel-trust-lane span,
+.travel-choice-rank,
+.travel-choice-thumb b,
+.travel-choice-title-row i,
+.travel-contract-write-head span,
+.travel-contract-write-head > b,
+.travel-history-card span,
+.travel-history-card em,
+.travel-final-grid article > span,
+.travel-final-authority dt,
+.travel-final-authority dd,
+.travel-final-evidence span,
+.travel-final-evidence a,
+.travel-onchain-result dt,
+.travel-onchain-result dd,
+.travel-history-trigger span {
+  font-size: 9px;
+}
+
+.travel-trust-lane strong,
+.travel-trust-lane small,
+.travel-choice-amount > span,
+.travel-verified-main small,
+.travel-history-card small,
+.travel-technical-drawer code,
+.travel-composer-dock-inner > small {
+  font-size: 10px;
+}
+
+.travel-choice-title-row strong {
+  font-size: 18px;
+}
+
+.travel-choice-body > em,
+.travel-choice-aircraft,
+.travel-choice-credit,
+.travel-current-step-head p,
+.travel-final-authority p,
+.travel-history-head p {
+  line-height: 1.55;
+}
+
+@media (max-width:720px) {
+  .travel-chat-welcome > p,
+  .travel-thread-user p,
+  .travel-current-step-head p,
+  .travel-thread-agent-note p {
+    font-size: 12px;
+  }
+
+  .travel-trust-lane span {
+    font-size: 9px;
+  }
+
+  .travel-choice-body > small {
+    font-size: 10px;
+  }
+
+  .travel-choice-title-row strong {
+    font-size: 15px;
+  }
+}
+
+/* Final legibility floor for interactive and evidence text. */
+
+.travel-choice-title-row i,
+.travel-history-card span,
+.travel-history-card em,
+.travel-final-grid article > span {
+  font-size: 10px;
+}
+
+.travel-final-authority dt {
+  font-size: 11px;
+}
+
+.travel-final-authority dd,
+.travel-onchain-result dd {
+  font-size: 10px;
+  line-height: 1.5;
+}
+
+.travel-final-grid article > button,
+.travel-history-head > button,
+.travel-history-card > button,
+.travel-selected-service > button,
+.travel-verified-actions a,
+.travel-verified-actions button {
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.travel-final-evidence span,
+.travel-final-evidence a {
+  font-size: 10px;
+}
+
+@media (max-width:720px) {
+  .travel-final-authority dt,
+  .travel-final-authority dd {
+    font-size: 10px;
+  }
+
+  .travel-history-card > button,
+  .travel-selected-service > button,
+  .travel-verified-actions a,
+  .travel-verified-actions button {
+    font-size: 11px;
+  }
+}
+
+/* Travel choice agency + slower, more legible interaction states. */
+
+.travel-choice-row {
+  cursor: default;
+}
+
+.travel-choice-row:hover {
+  transform: translateY(-1px);
+  border-color: rgba(153,69,255,.24);
+  background: rgba(153,69,255,.035);
+}
+
+.travel-choice-row.is-busy {
+  opacity: .68;
+}
+
+.travel-choice-actions {
+  display: grid;
+  gap: 6px;
+  width: 100%;
+  margin-top: 3px;
+}
+
+.travel-choice-actions button,
+.travel-choice-empty button {
+  min-height: 34px;
+  border-radius: 9px;
+  font-size: 11px;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.travel-choice-actions .is-select {
+  border: 1px solid rgba(153,69,255,.38);
+  color: #f8f4fb;
+  background: rgba(153,69,255,.16);
+}
+
+.travel-choice-actions .is-decline {
+  border: 1px solid rgba(255,255,255,.09);
+  color: #a99fad;
+  background: rgba(255,255,255,.025);
+}
+
+.travel-choice-actions button:disabled,
+.travel-choice-empty button:disabled {
+  opacity: .45;
+  cursor: not-allowed;
+}
+
+.travel-choice-empty {
+  display: grid;
+  justify-items: start;
+  gap: 7px;
+  padding: 18px;
+  border: 1px dashed rgba(255,255,255,.11);
+  border-radius: 15px;
+  background: rgba(255,255,255,.018);
+}
+
+.travel-choice-empty strong { font-size: 15px; }
+
+.travel-choice-empty p {
+  margin: 0;
+  color: #8f8698;
+  font-size: 12px;
+  line-height: 1.55;
+}
+
+.travel-choice-empty button {
+  margin-top: 4px;
+  padding: 0 12px;
+  border: 1px solid rgba(153,69,255,.25);
+  color: #d8c4e9;
+  background: rgba(153,69,255,.07);
+}
+
+.travel-policy-refresh-note {
+  margin: 8px 0 0;
+  padding: 9px 11px;
+  border: 1px solid rgba(20,241,149,.14);
+  border-radius: 10px;
+  color: #9ed7b8;
+  background: rgba(20,241,149,.035);
+  font-size: 11px;
+  line-height: 1.5;
+}
+
+@media (max-width:720px) {
+  .travel-choice-actions {
+    display: flex;
+    width: auto;
+    margin-top: 0;
+  }
+
+  .travel-choice-actions button {
+    min-height: 32px;
+    padding: 0 10px;
+  }
+}
+
+/* Compact chat-first entry surface + Spec 17 readability floor. */
+
+.travel-chat-welcome.is-compact {
+  position: relative;
+  width: min(760px, 100%);
+  padding-top: 42px;
+  text-align: left;
+}
+
+.travel-chat-welcome.is-compact .travel-chat-composer.is-centered {
+  margin-top: 0;
+}
+
+.travel-empty-intro {
+  display: grid;
+  gap: 5px;
+  margin: 0 auto 14px;
+  max-width: 620px;
+  text-align: center;
+}
+
+.travel-empty-intro h1 {
+  margin: 0;
+  color: #f4eef8;
+  font-size: clamp(30px, 4vw, 44px);
+  line-height: 1.08;
+  letter-spacing: -.025em;
+}
+
+.travel-empty-intro p {
+  margin: 0 auto;
+  max-width: 520px;
+  color: #a9a2af;
+  font-size: 13px;
+  line-height: 1.45;
+  font-weight: 500;
+}
+
+.travel-chat-context-strip.is-wallet-only {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 0 2px 10px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+}
+
+.travel-chat-context-strip.is-wallet-only > span {
+  color: #8b8195;
+  font: 800 11px var(--font-mono);
+  letter-spacing: .08em;
+}
+
+.travel-wallet-options {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 7px;
+  min-width: 0;
+}
+
+.travel-wallet-options-or {
+  color: #6f6678;
+  font-size: 9px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.email-wallet-control {
+  position: relative;
+}
+
+.email-wallet-control > .wallet-connect {
+  min-width: 132px;
+}
+
+.email-wallet-form {
+  position: absolute;
+  top: calc(100% + 9px);
+  right: 0;
+  z-index: 140;
+  display: grid;
+  gap: 9px;
+  width: min(300px, calc(100vw - 32px));
+  padding: 12px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 14px;
+  background: linear-gradient(180deg, rgba(28,20,39,.99), rgba(10,9,17,.99));
+  box-shadow: 0 22px 60px rgba(0,0,0,.5);
+  backdrop-filter: blur(24px);
+}
+
+.email-wallet-form label {
+  display: grid;
+  gap: 6px;
+}
+
+.email-wallet-form label > span {
+  color: #aaa1b3;
+  font-size: 10px;
+  line-height: 1.4;
+}
+
+.email-wallet-form input {
+  width: 100%;
+  min-height: 42px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 10px;
+  outline: none;
+  padding: 0 11px;
+  color: #fff;
+  background: rgba(255,255,255,.04);
+  font-size: 16px;
+}
+
+.email-wallet-form input:focus {
+  border-color: rgba(153,69,255,.42);
+  box-shadow: 0 0 0 3px rgba(153,69,255,.10);
+}
+
+.email-wallet-menu {
+  width: 270px;
+}
+
+@media (max-width:720px) {
+  .travel-wallet-options {
+    width: 100%;
+    justify-content: stretch;
+    flex-wrap: wrap;
+  }
+
+  .travel-wallet-options > .wallet-control {
+    flex: 1 1 150px;
+  }
+
+  .travel-wallet-options .wallet-connect,
+  .travel-wallet-options .wallet-compact-trigger {
+    width: 100%;
+    min-width: 0;
+  }
+
+  .travel-wallet-options-or {
+    flex: 0 0 auto;
+  }
+
+  .email-wallet-form {
+    right: auto;
+    left: 0;
+  }
+}
+
+.travel-chat-suggestions button > span {
+  margin-right: 7px;
+  color: #8ce9b9;
+  font: 900 9px var(--font-mono);
+  letter-spacing: .08em;
+}
+
+@media (max-width:720px) {
+  .travel-empty-intro h1 {
+    font-size: 32px;
+  }
+
+  .travel-empty-intro p {
+    font-size: 12px;
+  }
+
+  .travel-chat-context-strip.is-wallet-only {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.travel-combo-suggestions {
+  display:grid;
+  gap:10px;
+  margin:14px 0;
+}
+
+.travel-combo-head {
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:14px;
+}
+
+.travel-combo-head > div {
+  display:grid;
+  gap:3px;
+}
+
+.travel-combo-head span,
+.travel-combo-card-head span,
+.travel-combo-card-head b {
+  font:900 9px var(--font-mono);
+  letter-spacing:.08em;
+}
+
+.travel-combo-head span { color:#a879d1; }
+
+.travel-combo-head strong {
+  color:#f3edf7;
+  font-size:13px;
+}
+
+.travel-combo-head > small {
+  color:#756c7e;
+  font:800 8px var(--font-mono);
+}
+
+.travel-combo-grid {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+}
+
+.travel-combo-card {
+  display:grid;
+  gap:8px;
+  min-width:0;
+  padding:11px;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:14px;
+  background:rgba(255,255,255,.018);
+}
+
+.travel-combo-card.is-ai-pick {
+  border-color:rgba(153,69,255,.30);
+  background:linear-gradient(145deg,rgba(153,69,255,.08),rgba(20,241,149,.025));
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.035);
+}
+
+.travel-combo-card-head {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:8px;
+}
+
+.travel-combo-card-head span { color:#c49be9; }
+.travel-combo-card.is-fit .travel-combo-card-head b { color:#79dfaa; }
+.travel-combo-card.is-over .travel-combo-card-head b { color:#f0a3a3; }
+
+.travel-combo-total {
+  color:#fff;
+  font-size:22px;
+  line-height:1;
+}
+
+.travel-combo-total small {
+  color:#766d7d;
+  font-size:10px;
+  font-weight:700;
+}
+
+.travel-combo-route {
+  display:flex;
+  align-items:center;
+  gap:6px;
+  min-width:0;
+}
+
+.travel-combo-route > span {
+  display:grid;
+  gap:1px;
+  min-width:0;
+}
+
+.travel-combo-route b {
+  overflow:hidden;
+  color:#ddd6e4;
+  font:800 9px var(--font-mono);
+  text-overflow:ellipsis;
+  white-space:nowrap;
+}
+
+.travel-combo-route small {
+  color:#776e80;
+  font-size:9px;
+  white-space:nowrap;
+}
+
+.travel-combo-route i {
+  color:#5f5668;
+  font-size:10px;
+  font-style:normal;
+}
+
+.travel-combo-card p {
+  margin:0;
+  color:#a69dad;
+  font-size:10px;
+  line-height:1.45;
+}
+
+.travel-combo-source {
+  color:#6f6677;
+  font-size:8px;
+  line-height:1.4;
+}
+
+@media (max-width:720px) {
+  .travel-combo-head {
+    align-items:flex-start;
+    flex-direction:column;
+    gap:5px;
+  }
+
+  .travel-combo-grid {
+    display:flex;
+    gap:8px;
+    margin-right:-14px;
+    padding-right:14px;
+    overflow-x:auto;
+    scroll-snap-type:x mandatory;
+  }
+
+  .travel-combo-card {
+    flex:0 0 min(78vw,280px);
+    scroll-snap-align:start;
+  }
+}

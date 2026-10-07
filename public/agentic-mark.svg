@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title desc">
+  <title id="title">Agentic AI Gateway</title>
+  <desc id="desc">A connected action path forming an A, representing AI actions verified on-chain.</desc>
+  <defs>
+    <linearGradient id="g" x1="12" y1="12" x2="54" y2="54" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#B26BFF"/>
+      <stop offset=".55" stop-color="#7C4DFF"/>
+      <stop offset="1" stop-color="#14F195"/>
+    </linearGradient>
+    <linearGradient id="bg" x1="8" y1="5" x2="58" y2="60" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#171022"/>
+      <stop offset="1" stop-color="#0A1010"/>
+    </linearGradient>
+  </defs>
+  <rect x="3" y="3" width="58" height="58" rx="18" fill="url(#bg)" stroke="url(#g)" stroke-opacity=".55"/>
+  <path d="M17 45 30.8 16.5a1.6 1.6 0 0 1 2.9 0L47 45" fill="none" stroke="url(#g)" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M23.5 35.2h17" fill="none" stroke="url(#g)" stroke-width="4" stroke-linecap="round"/>
+  <circle cx="17" cy="45" r="4" fill="#B26BFF"/>
+  <circle cx="32.2" cy="14" r="4" fill="#8A57FF"/>
+  <circle cx="47" cy="45" r="4" fill="#14F195"/>
+  <path d="M42.5 20.5h8v8" fill="none" stroke="#14F195" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="m50.5 20.5-9.2 9.2" fill="none" stroke="#14F195" stroke-width="3" stroke-linecap="round"/>
+</svg>

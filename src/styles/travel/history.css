@@ -1,0 +1,416 @@
+/* Split from travel-agent.css · role module 5. */
+.travel-choice-card.is-locked {
+  opacity:.48;
+  filter:saturate(.62);
+}
+
+.travel-choice-card.is-locked:hover {
+  transform:none;
+  border-color:rgba(255,255,255,.08);
+  background:rgba(255,255,255,.022);
+}
+
+.travel-chain-rail { margin-top:18px; }
+
+.travel-chain-checkpoints {
+  display:grid;
+  gap:8px;
+  margin-top:12px;
+}
+
+.travel-chain-checkpoint {
+  display:grid;
+  grid-template-columns:20px minmax(0,1fr);
+  gap:9px;
+  align-items:start;
+  padding:9px 0;
+  border-bottom:1px solid rgba(255,255,255,.055);
+}
+
+.travel-chain-checkpoint:last-child { border-bottom:0; }
+
+.travel-chain-checkpoint > span {
+  color:#665e70;
+  font:800 11px var(--font-mono);
+}
+
+.travel-chain-checkpoint > div {
+  display:grid;
+  gap:2px;
+}
+
+.travel-chain-checkpoint strong { font-size:11px; }
+
+.travel-chain-checkpoint small {
+  color:#746b7d;
+  font-size:9px;
+}
+
+.travel-chain-checkpoint.is-active > span,
+.travel-chain-checkpoint.is-active strong {
+  color:#c8a5e7;
+}
+
+.travel-chain-checkpoint.is-verified > span,
+.travel-chain-checkpoint.is-verified strong {
+  color:#7ee2a8;
+}
+
+.travel-chain-checkpoint.is-verified small { color:#75a589; }
+
+@media (max-width:860px) {
+  .travel-choice-grid { grid-template-columns:1fr; }
+  .travel-booking-progress { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  .travel-stage-head { flex-direction:column; }
+  .travel-chain-gate { grid-template-columns:1fr; }
+}
+
+@media (max-width:520px) {
+  .travel-booking-progress { grid-template-columns:1fr 1fr; }
+  .travel-progress-step { padding:10px; }
+}
+
+/* =========================================================
+   Chat-style staged travel agent — current product surface
+   ========================================================= */
+
+.travel-chat-shell {
+  --travel-green:#14f195;
+  --travel-purple:#9945ff;
+  --travel-bg:#08070d;
+  min-height:calc(100vh - 84px);
+  color:#f8f5fb;
+  background:
+    radial-gradient(circle at 18% 0%,rgba(153,69,255,.10),transparent 30%),
+    linear-gradient(180deg,#09070f 0%,#08070d 58%,#07070b 100%);
+}
+
+.travel-chat-shell.is-empty {
+  display:grid;
+  place-items:center;
+  padding:64px 18px 96px;
+}
+
+.travel-chat-welcome {
+  width:min(820px,100%);
+  text-align:center;
+}
+
+.travel-chat-brand-mark {
+  display:grid;
+  place-items:center;
+  width:68px;
+  height:68px;
+  margin:0 auto 20px;
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:22px;
+  background:linear-gradient(145deg,rgba(153,69,255,.14),rgba(20,241,149,.045));
+  box-shadow:0 22px 72px rgba(0,0,0,.34),inset 0 1px 0 rgba(255,255,255,.08);
+}
+
+.travel-chat-brand-mark img {
+  width:48px;
+  height:48px;
+}
+
+.travel-chat-welcome h1 {
+  margin:12px 0 0;
+  font-size:clamp(42px,6vw,68px);
+  line-height:.98;
+  letter-spacing:-.055em;
+}
+
+.travel-chat-welcome > p {
+  max-width:650px;
+  margin:16px auto 0;
+  color:#9d94a7;
+  font-size:14px;
+  line-height:1.65;
+}
+
+.travel-chat-composer {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  align-items:end;
+  gap:10px;
+  border:1px solid rgba(255,255,255,.12);
+  background:rgba(19,16,25,.94);
+  box-shadow:0 20px 60px rgba(0,0,0,.30),inset 0 1px 0 rgba(255,255,255,.055);
+  backdrop-filter:blur(24px);
+}
+
+.travel-chat-composer.is-centered {
+  width:min(780px,100%);
+  margin:30px auto 0;
+  padding:12px 12px 12px 18px;
+  border-radius:26px;
+}
+
+.travel-chat-composer.is-docked {
+  width:100%;
+  padding:10px 10px 10px 16px;
+  border-radius:22px;
+}
+
+.travel-chat-composer textarea {
+  min-width:0;
+  min-height:76px;
+  max-height:154px;
+  resize:none;
+  overflow-y:auto;
+  scrollbar-width:none;
+  border:0;
+  outline:0;
+  padding:10px 4px;
+  color:#fff;
+  background:transparent;
+  font:inherit;
+  line-height:1.5;
+}
+
+.travel-chat-composer textarea::-webkit-scrollbar { display:none; }
+
+.travel-chat-composer textarea::placeholder { color:#665e70; }
+
+.travel-chat-composer-actions {
+  display:flex;
+  align-items:center;
+  gap:7px;
+  padding-bottom:2px;
+}
+
+.travel-chat-icon-button {
+  display:grid;
+  place-items:center;
+  width:42px;
+  height:42px;
+  border:1px solid rgba(255,255,255,.10);
+  border-radius:50%;
+  color:#c7bdcf;
+  background:rgba(255,255,255,.045);
+  cursor:pointer;
+  touch-action:manipulation;
+}
+
+.travel-chat-icon-button svg {
+  width:19px;
+  height:19px;
+  fill:none;
+  stroke:currentColor;
+  stroke-linecap:round;
+  stroke-linejoin:round;
+  stroke-width:1.7;
+}
+
+.travel-chat-icon-button.is-send {
+  color:#08070d;
+  border-color:transparent;
+  background:#f5effa;
+}
+
+.travel-chat-icon-button:disabled {
+  opacity:.32;
+  cursor:not-allowed;
+}
+
+.travel-chat-suggestions {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:8px;
+  margin-top:18px;
+}
+
+.travel-chat-suggestions button {
+  border:1px solid rgba(255,255,255,.085);
+  border-radius:999px;
+  padding:9px 12px;
+  color:#a49bab;
+  background:rgba(255,255,255,.025);
+  font-size:11px;
+  cursor:pointer;
+  touch-action:manipulation;
+}
+
+.travel-chat-suggestions button:hover {
+  color:#fff;
+  border-color:rgba(153,69,255,.24);
+  background:rgba(153,69,255,.055);
+}
+
+.travel-chat-shell.is-active { padding:22px 18px 190px; }
+
+.travel-thread { width:100%; }
+
+.travel-thread-inner { width:min(920px,100%); margin:0 auto; }
+
+.travel-trip-context {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:13px 0 17px;
+  border-bottom:1px solid rgba(255,255,255,.065);
+}
+
+.travel-trip-context > div { display:grid; gap:3px; }
+
+.travel-trip-context strong { font-size:16px; }
+
+.travel-trip-context small { color:#746b7d; font-size:10px; }
+
+.travel-demo-pill {
+  flex:0 0 auto;
+  padding:6px 8px;
+  border:1px solid rgba(153,69,255,.22);
+  border-radius:999px;
+  color:#cbb8dc;
+  background:rgba(153,69,255,.055);
+  font:800 8px var(--font-mono);
+}
+
+.travel-thread-user {
+  width:min(76%,680px);
+  margin:32px 0 16px auto;
+  padding:14px 16px;
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:20px 20px 6px 20px;
+  background:rgba(255,255,255,.055);
+}
+
+.travel-thread-user > span {
+  display:block;
+  color:#746b7d;
+  font-size:9px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.08em;
+}
+
+.travel-thread-user p {
+  margin:6px 0 0;
+  color:#e9e4ed;
+  font-size:13px;
+  line-height:1.55;
+}
+
+.travel-thread-agent-note {
+  display:flex;
+  align-items:flex-start;
+  gap:10px;
+  max-width:760px;
+  margin:14px 0 18px;
+  padding:11px 13px;
+  border-left:2px solid rgba(153,69,255,.55);
+  color:#9d94a7;
+  background:linear-gradient(90deg,rgba(153,69,255,.055),transparent);
+}
+
+.travel-thread-agent-note p { margin:0; font-size:11px; line-height:1.55; }
+
+.travel-verified-receipt {
+  display:grid;
+  grid-template-columns:34px minmax(0,1fr) auto;
+  gap:12px;
+  align-items:center;
+  margin:11px 0;
+  padding:12px 14px;
+  border:1px solid rgba(20,241,149,.12);
+  border-radius:15px;
+  background:rgba(20,241,149,.025);
+}
+
+.travel-verified-receipt.is-superseded {
+  opacity:.48;
+  border-color:rgba(255,255,255,.07);
+  background:rgba(255,255,255,.018);
+}
+
+.travel-verified-icon {
+  display:grid;
+  place-items:center;
+  width:32px;
+  height:32px;
+  border-radius:50%;
+  color:#06130d;
+  background:#7ee2a8;
+  font-weight:900;
+}
+
+.travel-verified-receipt.is-superseded .travel-verified-icon {
+  color:#a79ead;
+  background:rgba(255,255,255,.07);
+}
+
+.travel-verified-main { display:grid; gap:2px; min-width:0; }
+
+.travel-verified-main span { color:#7ee2a8; font:800 8px var(--font-mono); letter-spacing:.05em; }
+
+.travel-verified-main strong { overflow:hidden; font-size:12px; text-overflow:ellipsis; white-space:nowrap; }
+
+.travel-verified-main small { color:#746b7d; font-size:9px; }
+
+.travel-verified-actions { display:flex; align-items:center; gap:7px; }
+
+.travel-verified-actions a,
+.travel-verified-actions button {
+  border:1px solid rgba(255,255,255,.08);
+  border-radius:9px;
+  padding:7px 9px;
+  color:#afa5b8;
+  background:rgba(255,255,255,.025);
+  font-size:9px;
+  text-decoration:none;
+  cursor:pointer;
+}
+
+.travel-current-step {
+  scroll-margin-top:105px;
+  margin-top:20px;
+  padding:24px;
+  border:1px solid rgba(255,255,255,.085);
+  border-radius:24px;
+  background:
+    radial-gradient(circle at 8% 0%,rgba(153,69,255,.065),transparent 34%),
+    rgba(15,12,20,.84);
+  box-shadow:0 24px 72px rgba(0,0,0,.22);
+}
+
+.travel-current-step-head {
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:20px;
+}
+
+.travel-current-step-head > div:first-child { max-width:690px; }
+
+.travel-step-count { color:#b88ae2; font:800 9px var(--font-mono); letter-spacing:.09em; }
+
+.travel-current-step-head h2 {
+  margin:7px 0 0;
+  font-size:clamp(27px,4vw,36px);
+  letter-spacing:-.04em;
+}
+
+.travel-current-step-head p {
+  margin:8px 0 0;
+  color:#91889a;
+  font-size:12px;
+  line-height:1.6;
+}
+
+.travel-step-dots { display:flex; gap:6px; padding-top:7px; }
+
+.travel-step-dots i { width:26px; height:4px; border-radius:999px; background:rgba(255,255,255,.08); }
+
+.travel-step-dots i.is-active { background:#9d65d1; box-shadow:0 0 16px rgba(153,69,255,.35); }
+
+.travel-step-dots i.is-done { background:#54c993; }
+
+.travel-trust-lanes {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:8px;
+  margin-top:19px;
+}

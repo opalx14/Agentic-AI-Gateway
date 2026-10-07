@@ -1,0 +1,55 @@
+{
+  "name": "agentic-ai-gateway",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint",
+    "typecheck": "tsc --noEmit",
+    "test": "bun test",
+    "preview:cloudflare": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "deploy:cloudflare": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
+    "release:check": "bash scripts/release-check.sh"
+  },
+  "dependencies": {
+    "@dynamic-labs-sdk/client": "^1.34.2",
+    "@dynamic-labs-sdk/react-hooks": "^1.34.2",
+    "@dynamic-labs-sdk/solana": "^1.34.2",
+    "@opennextjs/cloudflare": "^1.20.6",
+    "@solana/web3.js": "1.98.4",
+    "@tanstack/react-query": "^5.103.2",
+    "next": "16.3.6",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4",
+    "@types/bun": "^1.4.2",
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.3.6",
+    "react-grab": "^0.2.0",
+    "tailwindcss": "^4",
+    "typescript": "^5",
+    "wrangler": "^4.142.0"
+  },
+  "packageManager": "bun@1.2.18",
+  "overrides": {
+    "@solana/web3.js": "1.98.4"
+  },
+  "ignoreScripts": [
+    "sharp",
+    "unrs-resolver"
+  ],
+  "trustedDependencies": [
+    "bigint-buffer",
+    "sharp",
+    "unrs-resolver"
+  ]
+}

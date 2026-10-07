@@ -1,0 +1,411 @@
+/* Split from travel-agent.css · role module 6. */
+.travel-trust-lane {
+  display:grid;
+  grid-template-columns:26px minmax(0,1fr);
+  gap:8px;
+  min-height:72px;
+  padding:11px;
+  border:1px solid rgba(255,255,255,.065);
+  border-radius:13px;
+  color:#625b6b;
+  background:rgba(255,255,255,.016);
+}
+
+.travel-trust-lane > b { font:800 9px var(--font-mono); }
+
+.travel-trust-lane > div { display:grid; gap:2px; }
+
+.travel-trust-lane span { font:800 8px var(--font-mono); letter-spacing:.06em; }
+
+.travel-trust-lane strong { color:#837a8c; font-size:10px; }
+
+.travel-trust-lane small { color:#5e5666; font-size:8px; }
+
+.travel-trust-lane.is-active {
+  color:#cfb4e8;
+  border-color:rgba(153,69,255,.24);
+  background:rgba(153,69,255,.06);
+}
+
+.travel-trust-lane.is-active strong { color:#f3edf8; }
+
+.travel-trust-lane.is-done {
+  color:#76d5a6;
+  border-color:rgba(20,241,149,.12);
+}
+
+.travel-inline-wallet {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) auto;
+  gap:16px;
+  align-items:center;
+  margin-top:12px;
+  padding:12px 14px;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:14px;
+}
+
+.travel-inline-wallet > div:first-child { display:grid; gap:3px; }
+
+.travel-inline-wallet strong { font-size:12px; }
+
+.travel-inline-wallet small { color:#7d7486; font-size:9px; line-height:1.45; }
+
+.travel-inline-wallet.is-locked {
+  border-color:rgba(245,158,11,.14);
+  background:rgba(245,158,11,.025);
+}
+
+.travel-inline-wallet.is-connected {
+  border-color:rgba(20,241,149,.14);
+  background:rgba(20,241,149,.025);
+}
+
+.travel-stage-search {
+  display:grid;
+  place-items:center;
+  min-height:260px;
+  margin-top:15px;
+  overflow:hidden;
+  border:1px solid rgba(153,69,255,.13);
+  border-radius:18px;
+  background:
+    radial-gradient(circle at 50% 45%,rgba(153,69,255,.11),transparent 30%),
+    rgba(255,255,255,.012);
+  text-align:center;
+}
+
+.travel-stage-search-orbit {
+  position:relative;
+  width:82px;
+  height:82px;
+  margin-bottom:14px;
+  animation:travel-chat-orbit 1.35s linear infinite;
+}
+
+.travel-stage-search-orbit::before,
+.travel-stage-search-orbit::after,
+.travel-stage-search-orbit span {
+  position:absolute;
+  border-radius:50%;
+  content:"";
+}
+
+.travel-stage-search-orbit::before { inset:0; border:1px solid rgba(153,69,255,.32); }
+
+.travel-stage-search-orbit::after { inset:17px; border:1px solid rgba(20,241,149,.25); }
+
+.travel-stage-search-orbit span {
+  width:10px;
+  height:10px;
+  background:#fff;
+  box-shadow:0 0 16px rgba(153,69,255,.65);
+}
+
+.travel-stage-search-orbit span:nth-child(1) { top:-4px; left:36px; }
+
+.travel-stage-search-orbit span:nth-child(2) { top:36px; right:-4px; background:#14f195; }
+
+.travel-stage-search-orbit span:nth-child(3) { bottom:5px; left:10px; background:#68d8ff; }
+
+@keyframes travel-chat-orbit { to { transform:rotate(360deg); } }
+
+.travel-stage-search strong { font-size:16px; }
+
+.travel-stage-search small { margin-top:5px; color:#766d80; font:700 9px var(--font-mono); }
+
+.travel-choice-list { display:grid; gap:10px; margin-top:15px; }
+
+.travel-choice-row {
+  position:relative;
+  display:grid;
+  grid-template-columns:34px 180px minmax(0,1fr) 108px;
+  gap:14px;
+  align-items:stretch;
+  min-height:126px;
+  overflow:hidden;
+  padding:8px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:16px;
+  color:inherit;
+  background:rgba(255,255,255,.018);
+  text-align:left;
+  cursor:pointer;
+  transition:.16s ease;
+}
+
+.travel-choice-row:hover:not(:disabled) {
+  transform:translateY(-1px);
+  border-color:rgba(153,69,255,.27);
+  background:rgba(153,69,255,.045);
+}
+
+.travel-choice-row:disabled { cursor:not-allowed; }
+
+.travel-choice-row.is-locked { opacity:.48; filter:saturate(.58); }
+
+.travel-choice-rank { display:grid; place-items:center; color:#655d6e; font:800 9px var(--font-mono); }
+
+.travel-choice-thumb {
+  position:relative;
+  display:block;
+  min-height:110px;
+  overflow:hidden;
+  border-radius:12px;
+}
+
+.travel-choice-thumb img { object-fit:cover; }
+
+.travel-choice-thumb::after {
+  position:absolute;
+  inset:0;
+  content:"";
+  background:linear-gradient(180deg,transparent 58%,rgba(5,4,8,.58));
+}
+
+.travel-choice-thumb b {
+  position:absolute;
+  z-index:2;
+  left:8px;
+  bottom:8px;
+  padding:5px 7px;
+  border-radius:999px;
+  color:#fff;
+  background:rgba(8,7,13,.76);
+  backdrop-filter:blur(8px);
+  font:800 8px var(--font-mono);
+}
+
+.travel-choice-body {
+  display:grid;
+  align-content:center;
+  gap:5px;
+  min-width:0;
+  padding:6px 0;
+}
+
+.travel-choice-title-row { display:flex; align-items:center; gap:8px; min-width:0; }
+
+.travel-choice-title-row strong { overflow:hidden; font-size:17px; text-overflow:ellipsis; white-space:nowrap; }
+
+.travel-choice-title-row i {
+  padding:4px 6px;
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:7px;
+  color:#c4b7cf;
+  background:rgba(255,255,255,.03);
+  font:800 8px var(--font-mono);
+  font-style:normal;
+}
+
+.travel-choice-body > small { color:#a096aa; font-size:10px; line-height:1.45; }
+
+.travel-choice-body > em { color:#716879; font-size:9px; font-style:normal; line-height:1.4; }
+
+.travel-choice-aircraft { color:#9489a0; font-size:9px; }
+
+.travel-choice-credit { color:#5f5768; font-size:8px; }
+
+.travel-choice-amount {
+  display:grid;
+  align-content:center;
+  justify-items:end;
+  gap:4px;
+  padding-right:6px;
+}
+
+.travel-choice-amount > small { color:#6e6676; font-size:8px; text-transform:uppercase; }
+
+.travel-choice-amount > strong { font-size:23px; }
+
+.travel-choice-amount > span { color:#b88ae2; font-size:9px; font-weight:800; }
+
+.travel-onchain-step { display:grid; gap:12px; margin-top:15px; }
+
+.travel-selected-service {
+  display:grid;
+  grid-template-columns:92px minmax(0,1fr) auto;
+  gap:13px;
+  align-items:center;
+  padding:10px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:15px;
+  background:rgba(255,255,255,.02);
+}
+
+.travel-selected-image {
+  position:relative;
+  width:92px;
+  height:66px;
+  overflow:hidden;
+  border-radius:10px;
+}
+
+.travel-selected-image img { object-fit:cover; }
+
+.travel-selected-service > div { display:grid; gap:3px; min-width:0; }
+
+.travel-selected-service > div strong { font-size:15px; }
+
+.travel-selected-service > div small { color:#746b7d; font-size:9px; }
+
+.travel-selected-service > button {
+  border:1px solid rgba(255,255,255,.09);
+  border-radius:9px;
+  padding:7px 9px;
+  color:#a79eaf;
+  background:rgba(255,255,255,.025);
+  font-size:9px;
+  cursor:pointer;
+}
+
+.travel-contract-write {
+  padding:17px;
+  border:1px solid rgba(20,241,149,.16);
+  border-radius:17px;
+  background:
+    linear-gradient(135deg,rgba(20,241,149,.045),rgba(153,69,255,.028)),
+    rgba(255,255,255,.01);
+}
+
+.travel-contract-write-head {
+  display:flex;
+  align-items:flex-start;
+  justify-content:space-between;
+  gap:18px;
+}
+
+.travel-contract-write-head > div { display:grid; gap:4px; }
+
+.travel-contract-write-head span { color:#7ee2a8; font:800 8px var(--font-mono); letter-spacing:.07em; }
+
+.travel-contract-write-head strong { font-size:15px; }
+
+.travel-contract-write-head > b {
+  padding:6px 8px;
+  border:1px solid rgba(20,241,149,.16);
+  border-radius:999px;
+  color:#7ee2a8;
+  background:rgba(20,241,149,.045);
+  font:800 8px var(--font-mono);
+}
+
+.travel-contract-instructions {
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:7px;
+  margin-top:13px;
+}
+
+.travel-contract-instructions code {
+  padding:6px 8px;
+  border:1px solid rgba(255,255,255,.07);
+  border-radius:8px;
+  color:#cec4d5;
+  background:rgba(0,0,0,.22);
+  font-size:9px;
+}
+
+.travel-contract-instructions span { color:#625a6a; }
+
+.travel-contract-write > p {
+  max-width:720px;
+  margin:11px 0 0;
+  color:#847b8d;
+  font-size:10px;
+  line-height:1.55;
+}
+
+.travel-contract-write .travel-onchain { margin-top:14px; }
+
+.travel-settlement-step { display:grid; gap:12px; margin-top:16px; }
+
+.travel-settlement-summary {
+  display:grid;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:15px;
+  padding:15px;
+  background:rgba(255,255,255,.018);
+}
+
+.travel-settlement-summary > div {
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  padding:10px 0;
+  border-bottom:1px solid rgba(255,255,255,.055);
+}
+
+.travel-settlement-summary > div span { color:#7b7284; font-size:10px; }
+
+.travel-settlement-summary > div strong { font-size:11px; text-align:right; }
+
+.travel-settlement-summary > div.is-total { border-bottom:0; padding-bottom:0; }
+
+.travel-settlement-summary > div.is-total strong { font-size:22px; }
+
+.travel-payment-truth { margin:0; color:#6e6676; font-size:9px; line-height:1.5; }
+
+.travel-complete-chat {
+  display:flex;
+  gap:16px;
+  align-items:flex-start;
+  padding:8px 0;
+}
+
+.travel-complete-check {
+  display:grid;
+  place-items:center;
+  width:44px;
+  height:44px;
+  flex:0 0 auto;
+  border-radius:50%;
+  color:#07120d;
+  background:#7ee2a8;
+  box-shadow:0 0 28px rgba(20,241,149,.18);
+  font-size:20px;
+  font-weight:900;
+}
+
+.travel-complete-chat h2 { margin:6px 0 0; font-size:30px; letter-spacing:-.04em; }
+
+.travel-complete-chat p { max-width:650px; margin:7px 0 0; color:#8f8698; font-size:11px; line-height:1.6; }
+
+.travel-technical-drawer {
+  margin:14px 0 0;
+  padding:12px 14px;
+  border:1px solid rgba(255,255,255,.055);
+  border-radius:13px;
+  background:rgba(255,255,255,.012);
+}
+
+.travel-technical-drawer summary { color:#756c7e; font-size:10px; cursor:pointer; }
+
+.travel-technical-drawer code { display:block; margin-top:7px; overflow-wrap:anywhere; color:#615969; font-size:8px; }
+
+.travel-composer-dock {
+  position:fixed;
+  z-index:65;
+  right:0;
+  bottom:0;
+  left:0;
+  padding:28px 18px 14px;
+  background:
+    linear-gradient(180deg,transparent 0%,rgba(8,7,13,.86) 24%,rgba(8,7,13,.98) 62%);
+  pointer-events:none;
+}
+
+.travel-composer-dock-inner {
+  width:min(800px,100%);
+  margin:0 auto;
+  pointer-events:auto;
+}
+
+.travel-composer-dock-inner > small {
+  display:block;
+  margin-top:6px;
+  color:#5e5666;
+  font-size:8px;
+  text-align:center;
+}

@@ -1,0 +1,124 @@
+/* Split from travel-agent.css · role module 9. */
+.travel-chat-wallet {
+  flex: 0 0 auto;
+}
+
+.travel-loading-agent {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  margin: 14px auto 0;
+  color: #bbb1c4;
+  font-size: 13px;
+}
+
+.travel-loading-dot {
+  width: 8px;
+  height: 8px;
+  flex: 0 0 auto;
+  border-radius: 50%;
+  background: #14f195;
+  box-shadow: 0 0 0 5px rgba(20,241,149,.07), 0 0 18px rgba(20,241,149,.35);
+  animation: travel-pulse 1.4s ease-in-out infinite;
+}
+
+.travel-stage-search strong {
+  min-height: 24px;
+  font-size: 16px;
+}
+
+.travel-stage-search small {
+  font-size: 11px;
+  letter-spacing: .035em;
+}
+
+.travel-thread-user > span,
+.travel-step-count,
+.travel-demo-pill,
+.travel-trust-lane span {
+  font-size: 11px;
+}
+
+.travel-thread-user p,
+.travel-current-step-head p {
+  font-size: 14px;
+}
+
+.travel-thread-agent-note p,
+.travel-choice-body > small,
+.travel-selected-service > div small,
+.travel-complete-chat p {
+  font-size: 12px;
+}
+
+.travel-trust-lane strong,
+.travel-trust-lane small,
+.travel-choice-body > em,
+.travel-choice-aircraft,
+.travel-choice-credit,
+.travel-choice-amount > span,
+.travel-choice-amount > small,
+.travel-settlement-summary > div span,
+.travel-settlement-summary > div strong,
+.travel-history-card small,
+.travel-final-grid article > small {
+  font-size: 11px;
+}
+
+.travel-choice-actions button,
+.travel-final-grid article > button,
+.travel-history-card > button,
+.travel-selected-service > button,
+.travel-verified-actions a,
+.travel-verified-actions button {
+  font-size: 12px;
+}
+
+.travel-final-authority dt,
+.travel-final-authority dd,
+.travel-final-evidence span,
+.travel-final-evidence a {
+  font-size: 11px;
+}
+
+.travel-choice-reason {
+  display:block;
+  margin-top:4px;
+  color:#b9f6d7;
+  font-size:11px;
+  line-height:1.45;
+}
+
+@media (max-width:720px) {
+  .travel-chat-welcome.is-compact {
+    padding-top: 46px;
+  }
+
+  .travel-chat-context-strip {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .travel-chat-origin {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+
+  .travel-chat-wallet {
+    width: 100%;
+  }
+
+  .travel-chat-wallet .wallet-control {
+    justify-content: flex-start;
+  }
+
+  .travel-thread-user p,
+  .travel-current-step-head p {
+    font-size: 13px;
+  }
+
+  .travel-stage-search strong {
+    font-size: 15px;
+  }
+}

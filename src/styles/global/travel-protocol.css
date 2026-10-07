@@ -1,0 +1,420 @@
+/* Split from globals.css · role module 12. */
+.evidence-approval-art {
+  display: grid;
+  grid-template-columns: minmax(200px,.58fr) minmax(0,1.42fr);
+  gap: 28px;
+  align-items: center;
+  margin-top: 20px;
+  padding: 22px 24px;
+  border: 1px solid rgba(245,158,11,.12);
+  border-radius: 22px;
+  background:
+    radial-gradient(circle at 14% 50%, rgba(153,69,255,.08), transparent 30%),
+    rgba(255,255,255,.014);
+}
+
+.evidence-approval-art-image {
+  min-height: 210px;
+}
+
+.evidence-approval-art h2 {
+  margin: 8px 0 0;
+  max-width: 650px;
+  font-size: 28px;
+  letter-spacing: -.035em;
+}
+
+.evidence-approval-art > div:last-child > p:last-child {
+  max-width: 690px;
+  margin: 12px 0 0;
+  color: #92889b;
+  font-size: 11px;
+  line-height: 1.65;
+}
+
+/* Reduce the text-wall effect in proof cards now that artwork provides visual anchoring. */
+
+.clarity-chain-records article {
+  min-height: 225px;
+}
+
+.clarity-chain-records article h3 {
+  max-width: 190px;
+}
+
+.clarity-chain-records article p {
+  max-width: 250px;
+}
+
+@keyframes focal-art-float {
+  0%,100% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-9px) scale(1.015); }
+}
+
+@keyframes focal-art-breathe {
+  0%,100% { transform: translate(-50%,-50%) scale(.98); }
+  50% { transform: translate(-50%,-50%) scale(1.035); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .clarity-art-hero { animation: none; }
+}
+
+@media (max-width: 1080px) {
+  .clarity-hero-visual {
+    min-height: 610px;
+    width: min(700px,100%);
+    margin: 0 auto;
+  }
+  .clarity-art-hero {
+    width: min(610px,100%);
+    height: 350px;
+    flex-basis: 350px;
+  }
+  .clarity-hero-art-stage {
+    width: min(620px,100%);
+    height: 360px;
+    flex-basis: 360px;
+  }
+  .clarity-hero-visual .clarity-hero-case {
+    margin: -62px auto 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .landing-web3,
+  .landing-shell {
+    max-width: 100vw;
+    overflow-x: clip;
+  }
+  .landing-clarity .landing-hero {
+    display: block !important;
+    grid-template-columns: minmax(0,1fr) !important;
+    width: calc(100% - 28px);
+    min-width: 0;
+    padding-top: 74px;
+  }
+  .landing-hero-copy,
+  .clarity-hero-visual {
+    width: 100%;
+    min-width: 0;
+  }
+  .web3-mesh,
+  .web3-grid {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    contain: paint;
+  }
+  .landing-nav-links,
+  .landing-network-chip {
+    display: none !important;
+  }
+  .clarity-hero-visual {
+    min-height: 560px;
+    margin-top: 34px;
+  }
+  .clarity-art-hero {
+    width: 100%;
+    height: 290px;
+    flex-basis: 290px;
+    margin-top: 0;
+  }
+  .clarity-hero-art-stage {
+    width: 100%;
+    height: 300px;
+    flex-basis: 300px;
+    overflow: hidden;
+  }
+  .clarity-hero-art-shield {
+    width: 200px;
+    height: 200px;
+  }
+  .clarity-hero-art-logistics,
+  .clarity-hero-art-travel {
+    width: 175px;
+    height: 132px;
+  }
+  .clarity-hero-art-logistics {
+    left: -8px;
+    bottom: 12px;
+  }
+  .clarity-hero-art-travel {
+    right: -6px;
+    top: 6px;
+  }
+  .clarity-art-float {
+    display: none;
+  }
+  .clarity-hero-visual .clarity-hero-case {
+    width: 100%;
+    max-width: 430px;
+    margin: -40px auto 0;
+  }
+  .clarity-use-case-art,
+  .clarity-use-case-art-demos {
+    height: 175px;
+  }
+  .clarity-blockchain-visual,
+  .clarity-approval-bridge,
+  .evidence-hero-art,
+  .evidence-approval-art {
+    grid-template-columns: 1fr;
+  }
+  .clarity-art-shield,
+  .clarity-art-approval,
+  .evidence-hero-art-image,
+  .evidence-approval-art-image {
+    min-height: 210px;
+  }
+  .evidence-usecase-art {
+    height: 145px;
+  }
+}
+
+@media (max-width: 440px) {
+  .landing-clarity .landing-hero h1 {
+    max-width: 100%;
+    font-size: clamp(43px, 13vw, 54px);
+    line-height: .98;
+  }
+  .landing-clarity .clarity-lede {
+    max-width: 100%!important;
+    font-size: 14px;
+    line-height: 1.62;
+  }
+  .clarity-hero-visual {
+    min-height: 540px;
+  }
+  .clarity-hero-visual .clarity-hero-case {
+    margin-top: -34px;
+  }
+  .clarity-art-hero {
+    width: 112%;
+    height: 260px;
+    flex-basis: 260px;
+  }
+  .clarity-hero-art-stage {
+    height: 270px;
+    flex-basis: 270px;
+  }
+  .clarity-hero-art-shield {
+    width: 176px;
+    height: 176px;
+  }
+  .clarity-hero-art-logistics,
+  .clarity-hero-art-travel {
+    width: 150px;
+    height: 112px;
+  }
+  .clarity-use-case-art,
+  .clarity-use-case-art-demos {
+    height: 150px;
+  }
+  .clarity-blockchain-visual,
+  .clarity-approval-bridge,
+  .evidence-hero-art,
+  .evidence-approval-art {
+    padding: 18px;
+  }
+}
+
+/* Spec 27 — Action journey as a readable rail, not six technical cards */
+
+.action-journey {
+  position: relative;
+  margin-top: 30px;
+  padding: 26px;
+  overflow: hidden;
+  border: 1px solid rgba(153,69,255,.13);
+  border-radius: 26px;
+  background:
+    radial-gradient(circle at 18% 0%, rgba(153,69,255,.09), transparent 30%),
+    radial-gradient(circle at 86% 100%, rgba(20,241,149,.045), transparent 30%),
+    rgba(10,8,17,.64);
+  backdrop-filter: blur(18px);
+  box-shadow: 0 24px 70px rgba(0,0,0,.18), inset 0 1px 0 rgba(255,255,255,.045);
+}
+
+.action-journey.is-compact {
+  margin-top: 14px;
+  padding: 20px;
+  border-radius: 20px;
+}
+
+.action-journey-head {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 26px;
+}
+
+.action-journey-head > div:first-child {
+  max-width: 650px;
+}
+
+.action-journey-head > div:first-child > span,
+.action-journey-summary span,
+.action-journey-focus span {
+  color: #9583a5;
+  font-family: var(--font-mono);
+  font-size: 8px;
+  font-weight: 900;
+  letter-spacing: .09em;
+}
+
+.action-journey-head h2 {
+  margin: 7px 0 0;
+  font-size: 24px;
+  line-height: 1.14;
+  letter-spacing: -.03em;
+}
+
+.action-journey-head p {
+  margin: 8px 0 0;
+  color: #8e8498;
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.action-journey-legend {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 8px 12px;
+}
+
+.action-journey-legend span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #766d80;
+  font-size: 8px;
+}
+
+.action-journey-legend i {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+}
+
+.action-journey-legend .is-app { background: #8b5cf6; }
+
+.action-journey-legend .is-human { background: #fbbf24; }
+
+.action-journey-legend .is-chain { background: #14f195; }
+
+.action-journey-legend .is-provider { background: #14f1d9; }
+
+.action-journey-summary {
+  display: grid;
+  grid-template-columns: minmax(0,1fr) auto minmax(0,1.15fr) auto minmax(190px,.72fr);
+  gap: 12px;
+  align-items: stretch;
+  margin-top: 22px;
+  padding: 11px;
+  border: 1px solid rgba(255,255,255,.06);
+  border-radius: 17px;
+  background: rgba(255,255,255,.018);
+}
+
+.action-journey-summary > div {
+  display: grid;
+  align-content: center;
+  gap: 5px;
+  min-height: 72px;
+  padding: 11px 13px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.018);
+}
+
+.action-journey-summary > i {
+  align-self: center;
+  color: #55495f;
+  font-style: normal;
+  font-size: 15px;
+}
+
+.action-journey-summary strong {
+  color: #d4cadb;
+  font-size: 11px;
+  line-height: 1.45;
+}
+
+.action-journey-summary .is-current {
+  border: 1px solid rgba(245,158,11,.16);
+  background: rgba(245,158,11,.045);
+}
+
+.action-journey-summary .is-current strong { color: #f2ca75; }
+
+.action-journey-summary .is-closed {
+  border: 1px solid rgba(239,68,68,.14);
+  background: rgba(239,68,68,.035);
+}
+
+.action-journey-summary .is-closed strong { color: #f2a0a5; }
+
+.action-journey-summary .is-chain,
+.action-journey-summary .is-done {
+  border: 1px solid rgba(20,241,149,.11);
+  background: rgba(20,241,149,.025);
+}
+
+.action-journey-summary .is-chain strong,
+.action-journey-summary .is-done strong { color: #a8ebca; }
+
+.action-journey-rail {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(6,minmax(0,1fr));
+  gap: 10px;
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.action-journey-rail::before {
+  content: "";
+  position: absolute;
+  z-index: 0;
+  top: 23px;
+  left: 7%;
+  right: 7%;
+  height: 1px;
+  background: linear-gradient(90deg,
+    rgba(139,92,246,.42),
+    rgba(139,92,246,.42) 25%,
+    rgba(245,158,11,.42) 50%,
+    rgba(20,241,149,.35) 75%,
+    rgba(20,241,217,.36));
+  box-shadow: 0 0 20px rgba(153,69,255,.08);
+}
+
+.action-journey-node {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  justify-items: center;
+  align-content: start;
+  min-width: 0;
+  text-align: center;
+}
+
+.action-journey-dot {
+  display: grid;
+  place-items: center;
+  width: 47px;
+  height: 47px;
+  border: 1px solid rgba(255,255,255,.10);
+  border-radius: 50%;
+  background: #100d18;
+  box-shadow: 0 0 0 7px rgba(10,8,17,.88);
+}
+
+.action-journey-dot span {
+  color: #84778f;
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 900;
+}

@@ -1,0 +1,417 @@
+/* Split from globals.css · role module 7. */
+.product-network-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 36px;
+  padding: 0 11px;
+  border: 1px solid rgba(20,241,149,.16);
+  border-radius: 999px;
+  color: #b9f8da;
+  background: rgba(20,241,149,.055);
+  font-family: var(--font-mono);
+  font-size: 9px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+.product-network-chip i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #14f195;
+  box-shadow: 0 0 0 4px rgba(20,241,149,.08), 0 0 14px rgba(20,241,149,.55);
+  animation: web3-pulse 2.5s ease-in-out infinite;
+}
+
+.product-wallet {
+  min-width: 0;
+}
+
+.product-wallet .wallet-connect {
+  min-height: 36px;
+  padding: 0 13px;
+  border-radius: 999px;
+  border-color: rgba(153,69,255,.26);
+  background: linear-gradient(135deg,rgba(153,69,255,.18),rgba(20,241,149,.06));
+  font-size: 10px;
+}
+
+.product-wallet .wallet-connected {
+  min-height: 40px;
+  max-width: 265px;
+  border-radius: 999px;
+  border-color: rgba(153,69,255,.20);
+  background: rgba(255,255,255,.04);
+}
+
+.product-wallet .wallet-address > span { color:#14f195; }
+
+.product-wallet .wallet-actions { display:none; }
+
+.ned-web3-shell {
+  position: relative;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 12% 0%,rgba(153,69,255,.19),transparent 29%),
+    radial-gradient(circle at 88% 10%,rgba(20,241,149,.08),transparent 24%),
+    radial-gradient(circle at 55% 52%,rgba(20,241,217,.04),transparent 27%),
+    linear-gradient(170deg,#0b0417 0%,#0b0714 42%,#080812 75%,#06060c 100%);
+}
+
+.ned-web3-shell::before {
+  content:"";
+  position:absolute;
+  inset:0 0 auto;
+  height:760px;
+  pointer-events:none;
+  opacity:.12;
+  mask-image:linear-gradient(to bottom,#000,transparent);
+  background-image:
+    linear-gradient(rgba(255,255,255,.065) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.065) 1px,transparent 1px);
+  background-size:42px 42px;
+  transform:perspective(700px) rotateX(58deg) scale(1.35) translateY(-210px);
+  transform-origin:top center;
+}
+
+.ned-web3-shell .ned-main {
+  position: relative;
+  z-index: 1;
+  padding-top: 38px;
+}
+
+.ned-demo-context {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  margin-bottom:14px;
+  padding:11px 14px;
+  border:1px solid rgba(255,255,255,.075);
+  border-radius:16px;
+  background:rgba(255,255,255,.022);
+  backdrop-filter:blur(12px);
+}
+
+.ned-demo-context > div:first-child {
+  display:grid;
+  gap:3px;
+  min-width:0;
+}
+
+.ned-demo-context-label {
+  color:#9e8bae;
+  font-family:var(--font-mono);
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.09em;
+}
+
+.ned-demo-context > div:first-child strong {
+  font-size:12px;
+}
+
+.ned-demo-context-chips {
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:flex-end;
+  gap:6px;
+}
+
+.ned-demo-context-chips span {
+  padding:6px 8px;
+  border-radius:999px;
+  font-family:var(--font-mono);
+  font-size:8px;
+  font-weight:800;
+  letter-spacing:.04em;
+}
+
+.ned-demo-context-chips .is-fixture {
+  color:#d0c5d9;
+  border:1px solid rgba(255,255,255,.09);
+  background:rgba(255,255,255,.035);
+}
+
+.ned-demo-context-chips .is-chain {
+  color:#a8f5d0;
+  border:1px solid rgba(20,241,149,.14);
+  background:rgba(20,241,149,.05);
+}
+
+.ned-demo-context-chips .is-pending {
+  color:#f2c76e;
+  border:1px solid rgba(245,158,11,.15);
+  background:rgba(245,158,11,.045);
+}
+
+.ned-web3-shell .ned-hero {
+  min-height: 320px;
+  border-color: rgba(153,69,255,.17);
+  background:
+    radial-gradient(circle at 77% 0%,rgba(20,241,149,.065),transparent 30%),
+    radial-gradient(circle at 18% 0%,rgba(153,69,255,.16),transparent 34%),
+    linear-gradient(145deg,rgba(255,255,255,.052),rgba(255,255,255,.012)),
+    rgba(14,9,24,.66);
+  backdrop-filter:blur(20px);
+  box-shadow:
+    0 28px 80px rgba(0,0,0,.25),
+    inset 0 1px 0 rgba(255,255,255,.07);
+}
+
+.ned-web3-shell .ned-hero::after {
+  content:"";
+  position:absolute;
+  inset:auto -120px -190px auto;
+  width:420px;
+  height:420px;
+  border:1px solid rgba(153,69,255,.13);
+  border-radius:50%;
+  box-shadow:0 0 80px rgba(153,69,255,.08);
+}
+
+.ned-web3-shell .ned-ambient-a {
+  background:radial-gradient(circle,rgba(153,69,255,.32),transparent 66%);
+}
+
+.ned-web3-shell .ned-ambient-b {
+  background:radial-gradient(circle,rgba(20,241,149,.10),transparent 66%);
+}
+
+.ned-web3-shell .ned-kicker {
+  color:#ad98bc;
+  font-family:var(--font-mono);
+  font-size:9px;
+  letter-spacing:.13em;
+}
+
+.ned-web3-shell .ned-hero h1 {
+  font-size:clamp(48px,5vw,70px);
+}
+
+.ned-web3-shell .ned-hero h1 span {
+  background:linear-gradient(90deg,#d8b4fe,#a970ff 45%,#63e7ce 78%,#14f195);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+}
+
+.ned-web3-shell .ned-domain-label {
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  margin-top:24px;
+  padding:7px 10px;
+  border:1px solid rgba(153,69,255,.14);
+  border-radius:999px;
+  color:#c6b4d3;
+  background:rgba(153,69,255,.055);
+  font-family:var(--font-mono);
+  font-size:8px;
+}
+
+.ned-web3-shell .ned-domain-label::before {
+  content:"";
+  width:6px;
+  height:6px;
+  border-radius:50%;
+  background:#14f195;
+  box-shadow:0 0 9px rgba(20,241,149,.48);
+}
+
+.ned-web3-shell .ned-hero-state {
+  align-self:center;
+  min-height:150px;
+  justify-content:center;
+  border-color:rgba(255,255,255,.10);
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.055),rgba(255,255,255,.014)),
+    rgba(7,7,13,.52);
+  backdrop-filter:blur(18px);
+  box-shadow:inset 0 1px 0 rgba(255,255,255,.06);
+}
+
+.ned-web3-shell .ned-hero-state::before {
+  content:"POLICY GATE";
+  color:#7c7188;
+  font-family:var(--font-mono);
+  font-size:8px;
+  font-weight:900;
+  letter-spacing:.09em;
+}
+
+.ned-web3-shell .ned-hero-state > strong {
+  font-size:34px;
+  text-shadow:0 0 24px currentColor;
+}
+
+.ned-web3-shell .ned-incident-card,
+.ned-web3-shell .ned-proposal-card,
+.ned-web3-shell .ned-authority-card,
+.ned-web3-shell .ned-result-card,
+.ned-web3-shell .travel-status-card,
+.ned-web3-shell .travel-commitment,
+.ned-web3-shell .travel-decision-card {
+  position:relative;
+  overflow:hidden;
+  border-color:rgba(255,255,255,.09);
+  background:
+    linear-gradient(145deg,rgba(255,255,255,.045),rgba(255,255,255,.012)),
+    rgba(14,10,24,.62);
+  backdrop-filter:blur(18px);
+  box-shadow:0 20px 56px rgba(0,0,0,.17),inset 0 1px 0 rgba(255,255,255,.055);
+}
+
+.ned-web3-shell .ned-incident-card::after,
+.ned-web3-shell .ned-proposal-card::after,
+.ned-web3-shell .ned-authority-card::after,
+.ned-web3-shell .ned-result-card::after {
+  content:"";
+  position:absolute;
+  width:210px;
+  height:210px;
+  right:-150px;
+  top:-140px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(153,69,255,.11),transparent 68%);
+  pointer-events:none;
+}
+
+.ned-web3-shell .ned-section-title > span {
+  border-color:rgba(153,69,255,.18);
+  color:#c7a9df;
+  background:rgba(153,69,255,.07);
+}
+
+.ned-web3-shell .ned-path-node {
+  border-color:rgba(255,255,255,.075);
+  background:rgba(255,255,255,.025);
+  backdrop-filter:blur(10px);
+}
+
+.ned-web3-shell .ned-path-arrow {
+  color:#766680;
+}
+
+.ned-web3-shell .ned-amount-block {
+  border-color:rgba(153,69,255,.16);
+  background:
+    linear-gradient(135deg,rgba(153,69,255,.11),rgba(20,241,149,.03)),
+    rgba(255,255,255,.02);
+}
+
+.ned-web3-shell .ned-amount-block strong {
+  font-size:40px;
+}
+
+.ned-policy-inspector {
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:6px;
+  margin-top:16px;
+}
+
+.ned-policy-inspector > div {
+  display:grid;
+  gap:4px;
+  padding:10px;
+  border:1px solid rgba(255,255,255,.065);
+  border-radius:11px;
+  background:rgba(255,255,255,.022);
+}
+
+.ned-policy-inspector span {
+  color:#766c80;
+  font-family:var(--font-mono);
+  font-size:7px;
+  font-weight:800;
+  letter-spacing:.06em;
+}
+
+.ned-policy-inspector strong {
+  color:#cbbdd4;
+  font-family:var(--font-mono);
+  font-size:8px;
+}
+
+.ned-web3-shell .ned-decision-box {
+  position:relative;
+  overflow:hidden;
+  padding:17px;
+  border-color:color-mix(in srgb,currentColor 36%,transparent);
+  background:
+    linear-gradient(135deg,color-mix(in srgb,currentColor 7%,transparent),rgba(255,255,255,.015));
+}
+
+.ned-web3-shell .ned-decision-box::after {
+  content:"";
+  position:absolute;
+  width:110px;
+  height:110px;
+  right:-50px;
+  top:-60px;
+  border-radius:50%;
+  background:currentColor;
+  opacity:.055;
+  filter:blur(10px);
+}
+
+.ned-web3-shell .ned-decision-box > span {
+  font-family:var(--font-mono);
+  font-size:8px;
+}
+
+.ned-web3-shell .ned-decision-box > strong {
+  font-size:34px;
+  text-shadow:0 0 24px currentColor;
+}
+
+.ned-inline-wallet {
+  display:grid;
+  gap:7px;
+  margin-top:10px;
+  padding:11px;
+  border:1px solid rgba(153,69,255,.11);
+  border-radius:13px;
+  background:rgba(153,69,255,.035);
+}
+
+.ned-inline-wallet > span {
+  color:#7f7189;
+  font-family:var(--font-mono);
+  font-size:7px;
+  font-weight:900;
+  letter-spacing:.07em;
+}
+
+.ned-inline-wallet .wallet-connect {
+  justify-self:start;
+  min-height:34px;
+  border-radius:999px;
+  border-color:rgba(153,69,255,.20);
+  background:linear-gradient(135deg,rgba(153,69,255,.15),rgba(20,241,149,.045));
+}
+
+.ned-inline-wallet .wallet-connected {
+  width:100%;
+  border-color:rgba(153,69,255,.13);
+  background:rgba(255,255,255,.025);
+}
+
+.ned-web3-shell .ned-primary-cta,
+.ned-web3-shell .ned-confirm-cta,
+.ned-web3-shell .travel-review-cta {
+  background:linear-gradient(120deg,#7b2fbe,#9945ff 48%,#5a6df6 76%,#16bfa2 120%);
+  box-shadow:0 14px 34px rgba(123,47,190,.26),inset 0 1px 0 rgba(255,255,255,.16);
+}
+
+.ned-web3-shell .ned-result-grid > div {
+  border-color:rgba(255,255,255,.065);
+  background:rgba(255,255,255,.02);
+}
+
+.ned-web3-shell .ned-result-grid code,
+.ned-web3-shell .ned-evidence-list code {
+  color:#aaf4d3;
+}
